@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h2 class="btn btn-warning" style="letter-spacing: 5px; word-spacing: 5px; font-size: 30px;">EMOTION TO EMOJI<br>&#128512;&#128528;&#128545;</h2>
+       <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+      	<br>
+        <b style="color: yellow">Are you Happy?</b>
+        <br>
+        <b style="color: black">Are you Sad?</b>
+        <br>
+        <b style="color: red">Are you Angry?</b>
+        <br>
+      </p>
+      <div id="camera" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <label style="background-color: white; border-radius: 15px; color: green; padding: 10px;">Webcam - </label>
+        <div id="webcam"></div>
+        <button class="btn btn-primary" onclick="take_snapshot()">Capture Image</button>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="predictions">
+        <label style="background-color: white; border-radius: 15px; color: green; padding: 10px;">Prediction 1 - </label>
+        <div id="result_emotion_name"></div>
+        <label style="background-color: white; border-radius: 15px; color: green; padding: 10px;">Prediction 2 - </label>
+        <div id="result_emotion_name2"></div>
+      </div>
+      <div id="result" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+	      <label style="background-color: white; border-radius: 15px; color: green; padding: 10px;">Snapshot - </label>
+        <div id="snapshot"></div>
+          <button class="btn btn-success" onclick="identify_img()">Identify Image</button>
+        <br><br>
+
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
